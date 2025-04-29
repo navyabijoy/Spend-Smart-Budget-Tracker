@@ -71,11 +71,12 @@ export default function AddBudget() {
   
   if(!user) return null;
   console.log(user.id)
-
+ // difference in setDoc and addDoc, setDoc auto generates its ID, but in addDoc you need to manually create an ID 
   async function onAddBudget(values: z.infer<typeof budgetFormSchema>) {
     try {
       if(!user) return;
       const userId = user.id;
+      // users/{userId}/budgets/{auto-generated-id}/ then the setDoc data
       const budgetRef = doc(collection(db, "users", userId, "budgets"));
       await setDoc(budgetRef, {
         budget_name: values.budget_name,
@@ -94,6 +95,7 @@ export default function AddBudget() {
     
     if(!user) return;
     const userId = user.id;
+     // users/{userId}/expenses/{auto-generated-id}/ then the setDoc data
     const expenseRef = doc(collection(db, "users", userId, "expenses"));
     await setDoc(expenseRef, {
       expense_name: values.expense_name,
