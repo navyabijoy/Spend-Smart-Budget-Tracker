@@ -3,8 +3,7 @@
 import React from 'react'
 import { useUser } from '@clerk/nextjs';
 import LoadingSpinner from '@/loading/page';
-import { Button } from '@/components/ui/button';
-
+import AddBudget from '@/components/addBudget';
 export default function Page() {
   const { isSignedIn, user, isLoaded } = useUser();
 
@@ -16,13 +15,14 @@ export default function Page() {
     console.log('working')
   }
   return (
-    
+    <>
     <main className='container mx-auto p-4'>
       <div className='flex justify-between items-center mb-8'>
         <h1 className='text-xl font-semibold'>Your Dashboard</h1>
-        <Button onClick={checkWorking} className='cursor-pointer'>Add Expense</Button>
+        <AddBudget />
       </div>
     </main>
+    </>
   )
 }
 

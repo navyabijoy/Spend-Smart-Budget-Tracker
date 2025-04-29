@@ -38,7 +38,7 @@ export default function Example() {
           <a href="#" className="-m-1.5 p-1.5">
             <div className="flex items-center gap-1">
               <HiCreditCard className="h-6 w-auto text-indigo-800" />
-              <p className="font-bold text-indigo-800">Spendee</p>
+              <p className="font-bold text-indigo-800">SpendSmart</p>
             </div>
           </a>
         </div>
@@ -90,7 +90,7 @@ export default function Example() {
               <a href="#" className="-m-1.5 p-1.5">
                 <div className="flex items-center gap-1">
                   <HiCreditCard className="h-6 w-auto text-indigo-800" />
-                  <p className="font-bold text-indigo-800">Spendee</p>
+                  <p className="font-bold text-indigo-800">SpendSmart</p>
                 </div>
               </a>
               <button
